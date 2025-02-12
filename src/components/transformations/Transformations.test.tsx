@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react'
 import { Transformations } from './Transformations'
 import { Transformation } from '../../types/Character'
 
-jest.mock('../../helpers/ImageStyles', () => ({
+jest.mock('../../helpers/thumbnailUtils', () => ({
 	replaceSpacesUrl: jest.fn((url) => url),
 	imageStyle: { borderRadius: '50%' },
 }))

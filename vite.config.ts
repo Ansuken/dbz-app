@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import stringHash from 'string-hash'
-import path from 'path'
+import * as path from 'path'
 
 export default defineConfig(({ mode }) => {
 	const isProduction = mode === 'production'
@@ -30,12 +30,9 @@ export default defineConfig(({ mode }) => {
 		css: {
 			modules: {
 				generateScopedName: (name, filename, css) => {
-					// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 					const hash = stringHash(css).toString(36).substr(0, 5)
-					// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 					const file = path.basename(filename, '.module.css')
-
-					return file + '_' + name + '__' + hash
+					return `${file}_${name}__${hash}`
 				},
 			},
 		},
