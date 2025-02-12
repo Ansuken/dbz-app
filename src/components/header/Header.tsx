@@ -4,6 +4,7 @@ import { HeartFull } from '../../common/svgs/Svgs'
 import { useNavigate } from 'react-router-dom'
 import { useAppSelector } from '../../hooks/hooks'
 import { useFavoritesContext } from '../layout/FavoritesContext'
+import logo from '../../assets/logo.png'
 
 export const Header = () => {
 	const favorites = useAppSelector(
@@ -22,7 +23,7 @@ export const Header = () => {
 	return (
 		<div className={styles.main}>
 			<div className={styles.brand} onClick={handleLogoClick}>
-				<img src="assets/logo.png" alt="DBZ Logo" />
+				<img src={logo} alt="DBZ Logo" />
 			</div>
 			<div className={styles.favorites} onClick={handleFavoritesClick}>
 				<HeartFull /> {favorites.length}

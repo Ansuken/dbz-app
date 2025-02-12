@@ -1,50 +1,114 @@
-# React + TypeScript + Vite
+# ⚛️ React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is built with **React 19**, **Vite**, and **TypeScript**, featuring an optimized setup for development and production. It includes tools like **Redux Toolkit**, **TanStack Query**, **CSS Modules**, and more.
 
-Currently, two official plugins are available:
+## Installation & Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Clone the repository
+```bash
+git clone <REPOSITORY_URL>
+cd <PROJECT_NAME>
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Installing dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+#### Using Yarn
+```bash
+yarn
 ```
+
+#### Using NPM
+```bash
+npm install
+```
+
+## Scripts
+
+### `yarn dev`
+
+Starts the development server on http://localhost:5173
+
+### `yarn build`
+
+Builds the app for production to the `dist/` folder.
+
+### `yarn preview`
+
+Runs a local server to preview the production build.
+
+### `yarn lint`
+
+Runs the linter for checking syntax errors and code style.
+
+### `yarn test`
+
+Runs tests
+
+## Technologies used
+
+- React 19
+- Typescript
+- React Router 6
+- Redux Toolkit
+- Tanstack Query
+- CSS Modules
+- Vite
+- Jest
+- ESLint
+- Prettier
+- Husky
+
+## Features
+- State management with Redux Toolkit
+- Data fetching & caching using TanStack Query
+- Client-side routing with React Router
+- Scoped styling with CSS Modules
+- Testing with Jest and React Testing Library
+- Linting & formatting with ESLint and Prettier
+
+## Project structure
+
+```
+.
+├── src
+│   ├── _reset.css
+│   ├── App.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   ├── vite-env.d.ts
+│   ├── api
+│   │   └── fetchCharacters.ts
+│   ├── common
+│   │   ├── styles
+│   │   ├── styleVars
+│   │   └── svgs
+│   ├── components
+│   │   ├── card
+│   │   ├── characterResume
+│   │   ├── favoriteIcon
+│   │   ├── header
+│   │   ├── layout
+│   │   ├── relatedCharacters
+│   │   ├── search
+│   │   └── transformations
+│   ├── helpers
+│   ├── hooks
+│   ├── router
+│   ├── store
+│   ├── types
+│   └── views
+├── index.html
+├── eslint.config.js
+├── jest.config.ts
+├── jest-setup.ts
+├── package.json
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+└── vite.config.ts
+``` 
+
+### License
+MIT License
+
+
