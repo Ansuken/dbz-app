@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { Character } from '../types/Character'
 
-export type CharactersState = {
+export interface CharactersState {
 	searchTerm: string
 	characters: Character[]
 	favorites: Character[]

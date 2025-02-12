@@ -64,10 +64,8 @@ describe('charactersSlice', () => {
 		expect(newState.favorites).toHaveLength(1)
 		expect(newState.favorites[0]).toEqual(character)
 
-		// Intentamos añadir el mismo personaje
 		newState = charactersReducer(newState, addFavorite(character))
 
-		// La longitud debe seguir siendo 1 (sin duplicados)
 		expect(newState.favorites).toHaveLength(1)
 	})
 

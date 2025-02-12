@@ -1,4 +1,4 @@
-export type Character = {
+export interface Character {
 	id: number
 	name: string
 	description: string
@@ -7,7 +7,7 @@ export type Character = {
 	transformations: Transformation[]
 }
 
-export type Transformation = {
+export interface Transformation {
 	id: number
 	image: string
 	name: string

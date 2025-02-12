@@ -1,7 +1,8 @@
 {
-  "files": [],
+  "compilerOptions": {},
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "include": ["src", "jest-setup.ts", "jest.config.ts", "vite.config.ts"]
 }

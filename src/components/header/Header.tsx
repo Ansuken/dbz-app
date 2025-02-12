@@ -13,11 +13,11 @@ export const Header = () => {
 	const { enableFavorites, disableFavorites } = useFavoritesContext()
 	const handleLogoClick = () => {
 		disableFavorites()
-		navigate('/')
+		void navigate('/')
 	}
 	const handleFavoritesClick = () => {
 		enableFavorites()
-		navigate('/')
+		void navigate('/')
 	}
 	return (
 		<div className={styles.main}>

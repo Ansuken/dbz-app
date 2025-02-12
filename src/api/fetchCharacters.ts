@@ -3,7 +3,7 @@ import { Character } from '../types/Character'
 
 const API_URL = 'https://dragonball-api.com/api/characters'
 
-type queryParams = {
+interface queryParams {
 	name?: string
 	race?: string
 }

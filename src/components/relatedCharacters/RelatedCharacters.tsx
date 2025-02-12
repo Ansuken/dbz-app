@@ -13,25 +13,24 @@ export const RelatedCharacters = ({ race }: { race: Character['race'] }) => {
 		<div className={styles.main}>
 			<div className={Thumbnails.thumbnailTitle}>Related by race</div>
 			<div className={Thumbnails.thumbnailList}>
-				{data &&
-					data.map((character: Character) => {
-						return (
+				{data?.map((character: Character) => {
+					return (
+						<div
+							key={character.id}
+							className={Thumbnails.thumbnailCharacter}
+							onClick={() => void navigate(`/${character.id}`)}>
 							<div
-								key={character.id}
-								className={Thumbnails.thumbnailCharacter}
-								onClick={() => navigate(`/${character.id}`)}>
-								<div
-									style={{
-										...imageStyle,
-										backgroundImage: `url(${replaceSpacesUrl(character.image)})`,
-									}}
-									className={Thumbnails.thumbnailCharacterImage}></div>
-								<div className={Thumbnails.thumbnailCharacterName}>
-									{character.name}
-								</div>
+								style={{
+									...imageStyle,
+									backgroundImage: `url(${replaceSpacesUrl(character.image)})`,
+								}}
+								className={Thumbnails.thumbnailCharacterImage}></div>
+							<div className={Thumbnails.thumbnailCharacterName}>
+								{character.name}
 							</div>
-						)
-					})}
+						</div>
+					)
+				})}
 			</div>
 		</div>
 	)

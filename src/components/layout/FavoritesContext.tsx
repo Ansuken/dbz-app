@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, ReactNode } from 'react'
 
-type FavoritesContextProps = {
+interface FavoritesContextProps {
 	showFavorites: boolean
 	enableFavorites: () => void
 	disableFavorites: () => void

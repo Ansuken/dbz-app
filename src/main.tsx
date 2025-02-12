@@ -6,7 +6,13 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from './store'
 
-createRoot(document.getElementById('root')!).render(
+const rootElement = document.getElementById('root')
+
+if (!rootElement) {
+	throw new Error('No se encontró el elemento #root en el DOM')
+}
+
+createRoot(rootElement).render(
 	<StrictMode>
 		<Provider store={store}>
 			<BrowserRouter>

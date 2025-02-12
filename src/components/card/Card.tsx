@@ -4,15 +4,11 @@ import { useNavigate } from 'react-router-dom'
 import { FavoriteIcon } from '../favoriteIcon/FavoriteIcon'
 import { replaceSpacesUrl, imageStyle } from '../../helpers/thumbnailUtils'
 
-type CardProps = {
-	character: Character
-}
-
-export const Card = ({ character }: CardProps) => {
+export const Card = ({ character }: { character: Character }) => {
 	const navigate = useNavigate()
 
 	const handleCardClick = () => {
-		navigate(`/${character.id}`)
+		void navigate(`/${character.id}`)
 	}
 
 	return (
