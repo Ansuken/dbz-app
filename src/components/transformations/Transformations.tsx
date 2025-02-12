@@ -1,6 +1,7 @@
 import { Transformation } from '../../types/Character'
 import Thumbnails from '../../common/styles/Thumbnails.module.css'
 import styles from './Transformations.module.css'
+import Common from '../../common/styles/Common.module.css'
 import { imageStyle, replaceSpacesUrl } from '../../helpers/thumbnailUtils'
 
 export const Transformations = ({
@@ -10,7 +11,7 @@ export const Transformations = ({
 }) => {
 	return (
 		<div className={styles.main}>
-			<div className={Thumbnails.thumbnailTitle}>Transformations</div>
+			<div className={Common.title}>Transformations</div>
 			<div className={Thumbnails.thumbnailList}>
 				{transformations?.map((transformation: Transformation) => {
 					return (

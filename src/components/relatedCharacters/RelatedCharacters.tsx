@@ -4,6 +4,7 @@ import { Character } from '../../types/Character'
 import { useCharactersByRace } from '../../hooks/useCharactersByRace'
 import { useNavigate } from 'react-router-dom'
 import { imageStyle, replaceSpacesUrl } from '../../helpers/thumbnailUtils'
+import Common from '../../common/styles/Common.module.css'
 
 export const RelatedCharacters = ({ race }: { race: Character['race'] }) => {
 	const { data } = useCharactersByRace(race)
@@ -11,7 +12,7 @@ export const RelatedCharacters = ({ race }: { race: Character['race'] }) => {
 
 	return (
 		<div className={styles.main}>
-			<div className={Thumbnails.thumbnailTitle}>Related by race</div>
+			<div className={Common.title}>Related by race</div>
 			<div className={Thumbnails.thumbnailList}>
 				{data?.map((character: Character) => {
 					return (

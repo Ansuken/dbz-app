@@ -4,6 +4,8 @@ import { Card } from '../../components/card/Card'
 import { RootState } from '../../store'
 import { useAppSelector } from '../../hooks/hooks'
 import { useFavoritesContext } from '../../components/layout/FavoritesContext'
+import Common from '../../common/styles/Common.module.css'
+import { mergeClasses } from '../../helpers/StyleUtils'
 
 export const CollectionView = () => {
 	const { showFavorites } = useFavoritesContext()
@@ -13,6 +15,11 @@ export const CollectionView = () => {
 
 	return (
 		<div className={styles.main}>
+			{showFavorites && (
+				<div className={mergeClasses(Common.title, styles.favTitle)}>
+					Favorites
+				</div>
+			)}
 			<Search />
 			{
 				<div className={styles.collection}>
