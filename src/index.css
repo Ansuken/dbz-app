@@ -1,0 +1,45 @@
+@import url('./_reset.css');
+@import url('./common/styleVars/Backgrounds.css');
+@import url('./common/styleVars/Texts.css');
+@import url('./common/styleVars/Colors.css');
+
+:root {
+  --font-family: "Roboto Condensed", sans-serif;
+  --font-weight: 400;
+
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  line-height: 1.5;
+  font-size: 16px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: var(--bg-website-primary);
+  color: var(--text-base);
+}
+
+body {
+  margin: 0 auto;
+  height: 100vh;
+}
+
+#root {
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #D9D9D9;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #EC1D24;
+}
+

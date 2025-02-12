@@ -1,0 +1,30 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 84px;
+    width: 100%;
+    background-color: var(--black);
+    padding: 16px 48px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.brand {
+    width: 150px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.favorites {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 16px;
+    }
+}

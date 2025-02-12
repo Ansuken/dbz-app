@@ -1,0 +1,64 @@
+.main {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 278px;
+    background-color: var(--black);
+    color: var(--text-secondary);
+    position: relative;
+}
+
+.main::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0px 20px 20px;
+    border-color: transparent transparent white transparent;
+}
+
+.characterPhoto {
+    min-width: 278px;
+    min-height: 278px;
+}
+
+.characterInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    padding: 48px;
+    width: 100%;
+}
+
+.characterTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.characterName {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.favorite {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        height: unset;
+        padding: 0;
+    }
+
+    .characterInfo {
+        padding: 24px 16px;
+    }
+}
+

@@ -1,0 +1,12 @@
+.main {
+    cursor: pointer;
+}
+
+.fav {
+    fill: var(--accent-primary);
+    transition: fill 0.2s ease-in-out;
+}
+
+.main:hover .fav {
+    fill: #FFFFFF;
+}

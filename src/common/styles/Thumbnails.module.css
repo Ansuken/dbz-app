@@ -1,0 +1,30 @@
+.thumbnailTitle {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.thumbnailList {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 24px;
+}
+
+.thumbnailCharacter {
+    display: flex;
+    flex-direction: column;
+    min-width: 168px;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.thumbnailCharacterImage {
+    border: 1px solid var(--border-color);
+    width: 100%;
+    height: 255px;
+}
+
+.thumbnailCharacterKi {
+    font-size: 12px;
+}
